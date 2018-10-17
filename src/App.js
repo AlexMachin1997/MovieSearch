@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import Header from "./UI/Header";
-import Movies from "./UI/Movies";
+import Header from "./components/UI/Header";
+import Movies from "./components/Movies/Movies";
 
 class App extends Component {
 
@@ -8,9 +8,7 @@ class App extends Component {
     super(props)
     this.state = {
         movies : [],
-    }
-
-    this.performSearch("Ant Man")
+      }
   }
 
   performSearch (searchTerm) {
@@ -30,6 +28,7 @@ class App extends Component {
           this.setState({movies: response.results});
           console.log(this.state.movies);
       })
+
       
       .catch(error => {
           console.log("Something went wrong. Woops.")
@@ -45,6 +44,7 @@ class App extends Component {
     return (
 
       <React.Fragment>
+
         <Header />
 
         <input style={{
@@ -55,6 +55,7 @@ class App extends Component {
           paddingBottom: 8,
           paddingLeft: 16
         }} onChange={this.searchChangeHandler.bind(this)} placeholder="Search for your favourite movie "/>
+
 
         <Movies movies={this.state.movies}/>
 

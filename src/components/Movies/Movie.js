@@ -6,11 +6,11 @@ const Movie = (props) => {
           <table>
               <tbody>
                   <td>
-                      <img src={props.movie.poster_path} alt={props.movie.original_title} />
+                      <img src={props.poster_path} alt={props.original_title} />
                   </td>
                   <td>
-                    <h3>{props.movie.title}</h3>
-                    <p>{props.movie.overview}</p>  
+                    <h3>{props.title}</h3>
+                    <p>{props.overview}</p>  
                   </td>
               </tbody>
           </table>
@@ -18,4 +18,4 @@ const Movie = (props) => {
     ) 
 }
 
-export default MovieRow
+export default Movie;

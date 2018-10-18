@@ -9,23 +9,26 @@ const Movie = (props) => {
 
     //If the source doesnt contain a poster path then use the placeholder
     if(moviePoster === null||undefined) {
-      image = "https://via.placeholder.com/185x250";
+      image = "https://via.placeholder.com/185x270";
+    }
+
+    const cardRow = {
+        marginBottom: '10px',
+        marginTop: '10px'
+    }
+
+    const imageHeight = {
+        height: '400px',
+        border: '1px solid black',
+        borderRadius: '10px'
     }
     
     return (
-      <React.Fragment>
-          <table>
-              <tbody>
-                  <td>
-                      <img src={image} alt={props.movie.original_title} />
-                  </td>
-                  <td>
-                    <h3>{props.movie.title}</h3>
-                    <p>{props.movie.overview}</p>  
-                  </td>
-              </tbody>
-          </table>
-      </React.Fragment>
+        <div className="col-3" style={cardRow}>
+            <div className="card">
+                <img className="width-100" src={image} style={imageHeight} alt={props.movie.original_title} data-toggle="tooltip" title={props.movie.original_title} />
+            </div>
+        </div>
     ) 
 }
 

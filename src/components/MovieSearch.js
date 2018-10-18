@@ -48,14 +48,16 @@ class MovieSearch extends Component {
   render() {
 
     const inputFields = {
-      padding: '15px'
+      padding: '15px',
+      margin: '10px 0',
+      borderRadius: '10px',
+      border: '1px solid black'
     }
 
     const movieSearchWrapper = {
       paddingLeft: '0px',
       paddingRight: '0px'
     }
-
 
     return (
 

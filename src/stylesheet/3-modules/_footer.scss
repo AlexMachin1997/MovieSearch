@@ -1,0 +1,19 @@
+/*
+Footer Styling
+- Nesting Is Used
+Footer Is A Global Tag, Any Tag Which Uses <footer> Will Get Styled
+*/
+
+footer {
+  padding-top: 13px;
+  background-color: $black;
+  color: $white;
+  text-align: center;
+  .copyright {
+    line-height: 40px;
+  }
+  li {
+    display: inline-block;
+    text-align: center;
+  }
+}

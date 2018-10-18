@@ -1,0 +1,54 @@
+#mainNav {
+  background-color: $black;
+ 
+  .navbar-toggler {
+    text-transform: uppercase;
+    color: white;
+    border: none;
+
+    &:hover {
+      outline: none;
+    }
+  }
+
+  .navbar-brand {
+    color: $yellow; //Link Colour
+    font-size: 20pt; // Font-Size For Branding (Logo - Alex Machin )
+
+    //States  e.g.Active, Focus, Hover
+    &:active,
+    &:focus,
+    &:hover {
+      color: $yellow
+    }
+  }
+}
+
+//If The Device Is Greater Than Or Equal To 992px Then....
+@media(min-width:992px) {
+  #mainNav {
+    padding-top: 25px;
+    padding-bottom: 25px;
+    background-color: transparent;
+
+    //Used When The Navbar Shrinks
+    &.navbar-shrink {
+      padding-top: 0;
+      padding-bottom: 0;
+      background-color: $black;
+      .navbar-brand {
+        padding: 5px 0;
+      }
+    }
+  }
+}
+
+//If The Device Is Less Than Or Equal To 800px Then...
+@media (max-width: 800px) {
+  #mainNav {
+    padding:10px;
+    .navbar-toggler {
+    font-size: 25pt;
+    }
+  }
+}

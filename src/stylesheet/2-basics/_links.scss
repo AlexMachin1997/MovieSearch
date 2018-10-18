@@ -1,0 +1,58 @@
+/*
+Anchor Styling Notes:
+- Global Anchor Tag
+- Social Links Are Styled Here
+- Nav Links Are Styled Here
+- Skill Links Are Defined Here
+- If An Anchor Tag Doesnt Have A Stlye By Default It Will Use The Proprties  Defined
+*/
+
+//By Default Its Always Black, But If It Has An ID Or Class Then This Wont Be Applicable
+a {
+  color: $black;
+
+  //On Hover
+  &:hover {
+    color:  $black;
+    text-decoration: none;
+  }
+}
+
+//Social Links With Icons (Footer Section)
+.social-links {
+  li{
+    padding: 5px;
+    a {
+      font-size: 25px;
+      padding-top: 3px;
+      display: block;
+      width: 40px;
+      height: 40px;
+     @include border-radius (100%); //Background Mixin
+     color: $white;
+
+      //Anchor States
+      //Hover, Focus, Active
+      &:active,
+      &:focus,
+      &:hover {
+        background-color: $yellow;
+      }
+    }
+  }
+}
+
+//mainNav Links
+//Links Nesting To Show Specificity
+.navbar-nav {
+  .nav-item {
+    .nav-link {
+      color: $white;
+      &.active,
+      &:hover {
+        color: $yellow;
+      }
+    }
+  }
+}
+

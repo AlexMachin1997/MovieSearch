@@ -1,0 +1,63 @@
+$justify-content-values: (
+  start: flex-start,
+  end: flex-end,
+  center: center,
+  between: space-between,
+  around: space-around
+);
+
+$align-items-values: (
+  start: flex-start,
+  end: flex-end,
+  center: center,
+  baseline: baseline,
+  stretch: stretch
+);
+
+$flex-direction-values: (
+  row: row,
+  row-reverse: row-reverse,
+  column: column,
+  column-reverse: column-reverse,
+  inherit: inherit,
+  initial: initial,
+  unset: unset
+);
+
+$flex-wrap-values: (
+  nowrap: nowrap, 
+  wrap: wrap, 
+  reverse: wrap-reverse
+);
+
+.flex {
+  display: flex;
+}
+
+.flex-inline {
+  display: inline-flex;
+}
+
+@each $name, $justify-content-value in $justify-content-values {
+  .justify-content-#{$name} {
+     justify-content: $justify-content-value;
+  } 
+}
+
+@each $name, $align-items-value in $align-items-values {
+  .align-items-#{$name} {
+     align-items: $align-items-value;
+  } 
+}
+
+@each $name, $flex-wrap-value in $flex-wrap-values {
+  .flex-wrap-#{$name} {
+     align-items: $flex-wrap-value;
+  } 
+}
+
+@each $name, $flex-direction-value in $flex-direction-values {
+  .flex-direction-#{$name} {
+     flex-direction: $flex-direction-value;
+  } 
+}

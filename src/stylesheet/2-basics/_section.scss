@@ -1,0 +1,15 @@
+/*
+Section Styling
+- Padding For Sections Used On The Page
+*/
+
+section {
+  padding: 70px 30px;
+}
+
+//At 767px Or Less Then....
+@media(max-width:768px) {
+  section {
+    padding : 90px 20px;
+  }
+}

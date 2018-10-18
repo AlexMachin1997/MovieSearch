@@ -1,0 +1,44 @@
+/*
+Image Styling Notes:
+- The Icons Have A Link So They Are Technicaly Links Since They Go Somewhere
+- Icon Effect Which Is Then Inherited To #GULP, #NODE AND #SASS
+- Icon Effect Also Increases Font-Size , Reduces Amount Of Code
+*/
+
+%Icon-Effect {
+  position: relative;
+  bottom: 10px;
+  @include increaseSize (1.2); 
+}
+
+#GULP {
+  color: $red;
+  &:hover {
+    @extend %Icon-Effect;
+    color: darken( $red, 10% );
+  }
+}
+
+#NODE {
+  color: $green;
+  &:hover {
+    @extend %Icon-Effect; 
+    color: darken( $green, 10% ); 
+  }
+}
+
+#SASS {
+  color: $pink;
+  &:hover {
+  @extend %Icon-Effect;
+  color: darken( $pink, 10% );
+  }
+}
+
+.preview-link,
+.github-link {
+  &:hover {
+    @include increaseSize (1.2);
+    @extend %Icon-Effect;
+  }
+}

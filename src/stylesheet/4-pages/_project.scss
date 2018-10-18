@@ -1,0 +1,29 @@
+/*
+Project Section Styling
+- An Image Is Imported Via Background-Image URL
+- Various Media Queries Are Used To Adjust The Amount Of Padding
+- Nesting Is Used
+- A Mixin Is Used To Ensure The Background Image Fits The Screen And Works On Other Browsers
+*/
+
+#Projects {
+  @include text-align (center); // Text Align Mixin
+
+  //Project Item Nested With Portfolio Caption
+  .project-item {
+    .project-caption {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 25px;
+        background-color: $white;
+    }
+  }
+}
+
+@media(max-width: 900px) {
+  #Projects{
+    .project-item{
+      margin-bottom: 50px;
+    }
+  }
+}

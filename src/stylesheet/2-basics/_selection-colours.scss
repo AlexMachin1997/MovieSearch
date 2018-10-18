@@ -1,0 +1,31 @@
+// $selection-color: #FFF498;
+// $none: transparent;
+
+// ::selection {
+//     background: $selection-color;
+//   }
+  
+//   ::-moz-selection {
+//     background: $selection-color;
+//   }
+  
+//   img::selection {
+//     background: $none
+//   }
+
+//   select::selection {
+//     background: $none;
+//   }
+
+//   option::selection {
+//     background: $none;
+//   }
+  
+  
+//   img::-moz-selection {
+//     background: $none;
+//   }
+  
+//   body {
+//     -webkit-tap-highlight-color: $selection-color;
+//   }
